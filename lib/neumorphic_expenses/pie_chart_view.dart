@@ -13,7 +13,7 @@ class PieChartView extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraint) => Container(
           decoration: BoxDecoration(
-            color: Color.fromRGBO(193, 214, 233, 1),
+            color: Colors.white.withOpacity(0.8),
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
@@ -48,7 +48,7 @@ class PieChartView extends StatelessWidget {
                 child: Container(
                   height: constraint.maxWidth * 0.4,
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(193, 214, 233, 1),
+                    color: Colors.white.withOpacity(0.8),
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(

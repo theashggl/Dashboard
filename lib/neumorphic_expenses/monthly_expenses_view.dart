@@ -8,11 +8,12 @@ class MonthlyExpensesView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color.fromRGBO(193, 214, 233, 1),
+      //backgroundColor: Color.fromRGBO(193, 214, 233, 1),
       body: SafeArea(
         child: Column(
+          mainAxisAlignment:MainAxisAlignment.center,
           children: <Widget>[
-            Spacer(),
+
             SizedBox(
                 height: height * 0.43,
                 child: Padding(
