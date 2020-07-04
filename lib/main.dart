@@ -91,89 +91,11 @@ class _HomePageState extends State<NeumorphicApp> {
                           ),
                         )),
                   ),
-//                  GestureDetector(
-//                    onTapUp: (details) {
-//                      setState(
-//                        () {
-//                          tr = false;
-//                        },
-//                      );
-//                    },
-//                    onTapDown: (details) {
-//                      setState(
-//                        () {
-//                          tr = true;
-//                        },
-//                      );
-//                    },
-//                    child: AnimatedContainer(
-//                      duration: Duration(milliseconds: 200),
-//                      width: 100,
-//                      height: 100,
-//                      decoration: BoxDecoration(
-//                        boxShadow: tr
-//                            ? []
-//                            : [
-//                                BoxShadow(
-//                                  color: Colors.white.withOpacity(0.8),
-//                                  offset: Offset(-6.0, -6.0),
-//                                  blurRadius: 16.0,
-//                                ),
-//                                BoxShadow(
-//                                  color: Colors.black.withOpacity(0.1),
-//                                  offset: Offset(6.0, 6.0),
-//                                  blurRadius: 16.0,
-//                                ),
-//                              ],
-//                        color: Color(0xFFEFEEEE),
-//                        borderRadius: BorderRadius.circular(122.0),
-//                      ),
-//                    ),
-//                  ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-//                  GestureDetector(
-//                    onTapUp: (details) {
-//                      setState(
-//                        () {
-//                          bl = false;
-//                        },
-//                      );
-//                    },
-//                    onTapDown: (details) {
-//                      setState(
-//                        () {
-//                          bl = true;
-//                        },
-//                      );
-//                    },
-//                    child: AnimatedContainer(
-//                      duration: Duration(milliseconds: 200),
-//                      width: 100,
-//                      height: 100,
-//                      decoration: BoxDecoration(
-//                        boxShadow: bl
-//                            ? []
-//                            : [
-//                                BoxShadow(
-//                                  color: Colors.white.withOpacity(0.8),
-//                                  offset: Offset(-6.0, -6.0),
-//                                  blurRadius: 16.0,
-//                                ),
-//                                BoxShadow(
-//                                  color: Colors.black.withOpacity(0.1),
-//                                  offset: Offset(6.0, 6.0),
-//                                  blurRadius: 16.0,
-//                                ),
-//                              ],
-//                        color: Color(0xFFEFEEEE),
-//                        borderRadius: BorderRadius.circular(122.0),
-//                      ),
-//                    ),
-//                  ),
                   GestureDetector(
                     onTapUp: (details) {
                       setState(
