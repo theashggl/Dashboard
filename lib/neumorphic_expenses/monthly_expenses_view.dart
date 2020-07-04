@@ -8,6 +8,15 @@ class MonthlyExpensesView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
+      appBar: new AppBar(
+        iconTheme: IconThemeData(
+            color: Colors.black
+        ),
+        title: const Text('Pie Chart', style: TextStyle(
+            color: Colors.black
+        )),
+        backgroundColor: Colors.white,
+      ),
       //backgroundColor: Color.fromRGBO(193, 214, 233, 1),
       body: SafeArea(
         child: Column(

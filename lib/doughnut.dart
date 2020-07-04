@@ -12,8 +12,14 @@ class doughnut extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('HEre'),
+      appBar: new AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.black
+      ),
+        title: const Text('Line Chart', style: TextStyle(
+            color: Colors.black
+        )),
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Padding(

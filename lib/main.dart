@@ -12,9 +12,9 @@ class NeumorphicApp extends StatefulWidget {
 }
 
 class _HomePageState extends State<NeumorphicApp> {
+
   var tl = false,br = false;
 
-  //tr = false, bl = false,
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,10 +22,6 @@ class _HomePageState extends State<NeumorphicApp> {
         appBar: NeuAppBar(
           title: Text('Dashboard', textScaleFactor: 1.0),
         ),
-//      theme: ThemeData(
-//        primarySwatch: Colors.blue,
-//        scaffoldBackgroundColor: Color(0XFFEFF3F6),
-//      ),
         body: Builder(
           builder: (context) => Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
