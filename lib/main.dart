@@ -12,7 +12,9 @@ class NeumorphicApp extends StatefulWidget {
 }
 
 class _HomePageState extends State<NeumorphicApp> {
-  var tl = false, tr = false, bl = false, br = false;
+  var tl = false,br = false;
+
+  //tr = false, bl = false,
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -89,89 +91,89 @@ class _HomePageState extends State<NeumorphicApp> {
                           ),
                         )),
                   ),
-                  GestureDetector(
-                    onTapUp: (details) {
-                      setState(
-                        () {
-                          tr = false;
-                        },
-                      );
-                    },
-                    onTapDown: (details) {
-                      setState(
-                        () {
-                          tr = true;
-                        },
-                      );
-                    },
-                    child: AnimatedContainer(
-                      duration: Duration(milliseconds: 200),
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: tr
-                            ? []
-                            : [
-                                BoxShadow(
-                                  color: Colors.white.withOpacity(0.8),
-                                  offset: Offset(-6.0, -6.0),
-                                  blurRadius: 16.0,
-                                ),
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  offset: Offset(6.0, 6.0),
-                                  blurRadius: 16.0,
-                                ),
-                              ],
-                        color: Color(0xFFEFEEEE),
-                        borderRadius: BorderRadius.circular(122.0),
-                      ),
-                    ),
-                  ),
+//                  GestureDetector(
+//                    onTapUp: (details) {
+//                      setState(
+//                        () {
+//                          tr = false;
+//                        },
+//                      );
+//                    },
+//                    onTapDown: (details) {
+//                      setState(
+//                        () {
+//                          tr = true;
+//                        },
+//                      );
+//                    },
+//                    child: AnimatedContainer(
+//                      duration: Duration(milliseconds: 200),
+//                      width: 100,
+//                      height: 100,
+//                      decoration: BoxDecoration(
+//                        boxShadow: tr
+//                            ? []
+//                            : [
+//                                BoxShadow(
+//                                  color: Colors.white.withOpacity(0.8),
+//                                  offset: Offset(-6.0, -6.0),
+//                                  blurRadius: 16.0,
+//                                ),
+//                                BoxShadow(
+//                                  color: Colors.black.withOpacity(0.1),
+//                                  offset: Offset(6.0, 6.0),
+//                                  blurRadius: 16.0,
+//                                ),
+//                              ],
+//                        color: Color(0xFFEFEEEE),
+//                        borderRadius: BorderRadius.circular(122.0),
+//                      ),
+//                    ),
+//                  ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  GestureDetector(
-                    onTapUp: (details) {
-                      setState(
-                        () {
-                          bl = false;
-                        },
-                      );
-                    },
-                    onTapDown: (details) {
-                      setState(
-                        () {
-                          bl = true;
-                        },
-                      );
-                    },
-                    child: AnimatedContainer(
-                      duration: Duration(milliseconds: 200),
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: bl
-                            ? []
-                            : [
-                                BoxShadow(
-                                  color: Colors.white.withOpacity(0.8),
-                                  offset: Offset(-6.0, -6.0),
-                                  blurRadius: 16.0,
-                                ),
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  offset: Offset(6.0, 6.0),
-                                  blurRadius: 16.0,
-                                ),
-                              ],
-                        color: Color(0xFFEFEEEE),
-                        borderRadius: BorderRadius.circular(122.0),
-                      ),
-                    ),
-                  ),
+//                  GestureDetector(
+//                    onTapUp: (details) {
+//                      setState(
+//                        () {
+//                          bl = false;
+//                        },
+//                      );
+//                    },
+//                    onTapDown: (details) {
+//                      setState(
+//                        () {
+//                          bl = true;
+//                        },
+//                      );
+//                    },
+//                    child: AnimatedContainer(
+//                      duration: Duration(milliseconds: 200),
+//                      width: 100,
+//                      height: 100,
+//                      decoration: BoxDecoration(
+//                        boxShadow: bl
+//                            ? []
+//                            : [
+//                                BoxShadow(
+//                                  color: Colors.white.withOpacity(0.8),
+//                                  offset: Offset(-6.0, -6.0),
+//                                  blurRadius: 16.0,
+//                                ),
+//                                BoxShadow(
+//                                  color: Colors.black.withOpacity(0.1),
+//                                  offset: Offset(6.0, 6.0),
+//                                  blurRadius: 16.0,
+//                                ),
+//                              ],
+//                        color: Color(0xFFEFEEEE),
+//                        borderRadius: BorderRadius.circular(122.0),
+//                      ),
+//                    ),
+//                  ),
                   GestureDetector(
                     onTapUp: (details) {
                       setState(
@@ -197,8 +199,19 @@ class _HomePageState extends State<NeumorphicApp> {
                       width: 100,
                       height: 100,
                       child: Center(
-                        child: Icon(
-                          Icons.pie_chart,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text(
+                              'Pie Chart',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Icon(Icons.pie_chart),
+                          ],
                         ),
                       ),
                       decoration: BoxDecoration(
