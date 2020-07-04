@@ -33,11 +33,15 @@ var tl=false,tr=false,bl=false,br=false;
                     onTapUp: (details) {
                       setState((){
                         tl=false;
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => doughnut()
+                        ),);
                       },);
                     },
                     onTapDown: (details) {
                       setState((){
                         tl=true;
+
                       },);
                     },
                     child: AnimatedContainer(
@@ -60,6 +64,22 @@ var tl=false,tr=false,bl=false,br=false;
                         color: Color(0xFFEFEEEE),
                         borderRadius: BorderRadius.circular(122.0),
                       ),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Text(
+                              'Line Chart',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Icon(Icons.multiline_chart),
+                          ],
+                        ),
+                      )
                     ),
                   ),
                   GestureDetector(

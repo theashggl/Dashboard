@@ -11,8 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  fl_chart: ^0.10.1
   cupertino_icons: ^0.1.3
+  clay_containers: ^0.2.2
   neumorphic: any
 dev_dependencies:
   flutter_test:
