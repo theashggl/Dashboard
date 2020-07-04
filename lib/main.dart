@@ -2,16 +2,18 @@ import 'package:dashboard/doughnut.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic/neumorphic.dart';
+import 'neumorphic_expenses/monthly_expenses_view.dart';
 
 void main() => runApp(NeumorphicApp());
+
 class NeumorphicApp extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<NeumorphicApp>{
-var tl=false,tr=false,bl=false,br=false;
-@override
+class _HomePageState extends State<NeumorphicApp> {
+  var tl = false, tr = false, bl = false, br = false;
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -27,89 +29,100 @@ var tl=false,tr=false,bl=false,br=false;
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Row(
-               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   GestureDetector(
                     onTapUp: (details) {
-                      setState((){
-                        tl=false;
-                        Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => doughnut()
-                        ),);
-                      },);
+                      setState(
+                        () {
+                          tl = false;
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => doughnut()),
+                          );
+                        },
+                      );
                     },
                     onTapDown: (details) {
-                      setState((){
-                        tl=true;
-
-                      },);
+                      setState(
+                        () {
+                          tl = true;
+                        },
+                      );
                     },
                     child: AnimatedContainer(
-                      duration: Duration(milliseconds: 200),
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: tl?[]:[
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.8),
-                            offset: Offset(-6.0, -6.0),
-                            blurRadius: 16.0,
-                          ),
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            offset: Offset(6.0, 6.0),
-                            blurRadius: 16.0,
-                          ),
-                        ],
-                        color: Color(0xFFEFEEEE),
-                        borderRadius: BorderRadius.circular(122.0),
-                      ),
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Text(
-                              'Line Chart',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Icon(Icons.multiline_chart),
-                          ],
+                        duration: Duration(milliseconds: 200),
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          boxShadow: tl
+                              ? []
+                              : [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.8),
+                                    offset: Offset(-6.0, -6.0),
+                                    blurRadius: 16.0,
+                                  ),
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    offset: Offset(6.0, 6.0),
+                                    blurRadius: 16.0,
+                                  ),
+                                ],
+                          color: Color(0xFFEFEEEE),
+                          borderRadius: BorderRadius.circular(122.0),
                         ),
-                      )
-                    ),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              Text(
+                                'Line Chart',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Icon(Icons.multiline_chart),
+                            ],
+                          ),
+                        )),
                   ),
                   GestureDetector(
                     onTapUp: (details) {
-                      setState((){
-                        tr=false;
-                      },);
+                      setState(
+                        () {
+                          tr = false;
+                        },
+                      );
                     },
                     onTapDown: (details) {
-                      setState((){
-                        tr=true;
-                      },);
+                      setState(
+                        () {
+                          tr = true;
+                        },
+                      );
                     },
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        boxShadow: tr?[]:[
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.8),
-                            offset: Offset(-6.0, -6.0),
-                            blurRadius: 16.0,
-                          ),
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            offset: Offset(6.0, 6.0),
-                            blurRadius: 16.0,
-                          ),
-                        ],
+                        boxShadow: tr
+                            ? []
+                            : [
+                                BoxShadow(
+                                  color: Colors.white.withOpacity(0.8),
+                                  offset: Offset(-6.0, -6.0),
+                                  blurRadius: 16.0,
+                                ),
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  offset: Offset(6.0, 6.0),
+                                  blurRadius: 16.0,
+                                ),
+                              ],
                         color: Color(0xFFEFEEEE),
                         borderRadius: BorderRadius.circular(122.0),
                       ),
@@ -122,32 +135,38 @@ var tl=false,tr=false,bl=false,br=false;
                 children: <Widget>[
                   GestureDetector(
                     onTapUp: (details) {
-                      setState((){
-                        bl=false;
-                      },);
+                      setState(
+                        () {
+                          bl = false;
+                        },
+                      );
                     },
                     onTapDown: (details) {
-                      setState((){
-                        bl=true;
-                      },);
+                      setState(
+                        () {
+                          bl = true;
+                        },
+                      );
                     },
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        boxShadow: bl?[]:[
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.8),
-                            offset: Offset(-6.0, -6.0),
-                            blurRadius: 16.0,
-                          ),
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            offset: Offset(6.0, 6.0),
-                            blurRadius: 16.0,
-                          ),
-                        ],
+                        boxShadow: bl
+                            ? []
+                            : [
+                                BoxShadow(
+                                  color: Colors.white.withOpacity(0.8),
+                                  offset: Offset(-6.0, -6.0),
+                                  blurRadius: 16.0,
+                                ),
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  offset: Offset(6.0, 6.0),
+                                  blurRadius: 16.0,
+                                ),
+                              ],
                         color: Color(0xFFEFEEEE),
                         borderRadius: BorderRadius.circular(122.0),
                       ),
@@ -155,14 +174,23 @@ var tl=false,tr=false,bl=false,br=false;
                   ),
                   GestureDetector(
                     onTapUp: (details) {
-                      setState((){
-                        br=false;
-                      },);
+                      setState(
+                        () {
+                          br = false;
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MonthlyExpensesView()),
+                          );
+                        },
+                      );
                     },
                     onTapDown: (details) {
-                      setState((){
-                        br=true;
-                      },);
+                      setState(
+                        () {
+                          br = true;
+                        },
+                      );
                     },
                     child: AnimatedContainer(
                       duration: Duration(milliseconds: 200),
@@ -174,18 +202,20 @@ var tl=false,tr=false,bl=false,br=false;
                         ),
                       ),
                       decoration: BoxDecoration(
-                        boxShadow: br?[]:[
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.8),
-                            offset: Offset(-6.0, -6.0),
-                            blurRadius: 16.0,
-                          ),
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            offset: Offset(6.0, 6.0),
-                            blurRadius: 16.0,
-                          ),
-                        ],
+                        boxShadow: br
+                            ? []
+                            : [
+                                BoxShadow(
+                                  color: Colors.white.withOpacity(0.8),
+                                  offset: Offset(-6.0, -6.0),
+                                  blurRadius: 16.0,
+                                ),
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  offset: Offset(6.0, 6.0),
+                                  blurRadius: 16.0,
+                                ),
+                              ],
                         color: Color(0xFFEFEEEE),
                         borderRadius: BorderRadius.circular(122.0),
                       ),
